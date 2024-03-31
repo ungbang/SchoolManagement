@@ -32,7 +32,7 @@ namespace SchoolManagementSystem.Admin
         {
             try
             {
-                DataTable dt = fn.Fetch("Select * from Class where ClassName = '" + txtClass.Text.Trim() + "'");
+                DataTable dt = fn.Fetch("Select * from Class where ClassName = '"+txtClass.Text.Trim()+"'");
                 if(dt.Rows.Count == 0)
                 {
                     string query = "Insert into Class values('"+txtClass.Text.Trim()+"')";
